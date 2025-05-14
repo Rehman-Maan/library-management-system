@@ -6,7 +6,8 @@ function ViewAuthors() {
 
   useEffect(() => {
     // Fetch authors from the backend
-    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
+    // axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
+    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/books')
       .then(response => setAuthors(response.data))
       .catch(error => console.error('Error fetching authors:', error));
   }, []);
