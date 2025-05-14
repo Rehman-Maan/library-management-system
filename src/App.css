@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000000; /* Black background */
+  color: #ecf0f1;  /* Light text color */
+}
+
+h1 {
+  font-size: 36px;
+  color: #ecf0f1;  /* Light text color */
+  margin-bottom: 20px;
+  text-align: center;  /* Center the heading */
+}
+
+/* Nav Bar Styles */
+nav {
+  background-color: #2c3e50;  /* Dark Blue */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ecf0f1;  /* Light text color */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #3498db;  /* Light Blue */
+  border-radius: 50px;  /* Rounded corners */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Bubbly Button Hover Effect */
+nav a:hover {
+  background-color: #2980b9;  /* Darker blue on hover */
+  transform: scale(1.1);  /* Slightly enlarge the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Headers */
+h2 {
+  margin-top: 20px;
+  color: #ecf0f1;  /* Light text color */
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #34495e;  /* Dark Blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;  /* Center form elements */
+}
+
+input, select {
+  width: 100%;  /* Make input fields take up full width */
+  padding: 12px;  /* Increased padding for better spacing */
+  margin-bottom: 15px;  /* More spacing between fields */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;  /* Rounded borders */
+  background-color: #ecf0f1;  /* Light background for inputs */
+}
+
+button {
+  width: 100%;  /* Make button take up full width */
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3498db;  /* Light Blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;  /* Darker Blue */
+}
+
+/* Table Styles for Books and Authors */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  border: 2px solid #000000;  /* Black table border */
+}
+
+th, td {
+  padding: 12px;  /* More padding for better spacing */
+  text-align: left;
+  border: 1px solid #000000;  /* Black border for cells */
+}
+
+th {
+  background-color: #2c3e50;  /* Dark Blue */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #34495e;  /* Dark Blue */
+}
+
+tr:hover {
+  background-color: #2980b9;  /* Light Blue */
+}
+
+.view-books, .view-authors {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #34495e;  /* Dark Blue */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-books h2, .view-authors h2 {
+  text-align: center;
+  color: #ecf0f1;  /* Light text color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.view-books table, .view-authors table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.view-books td, .view-authors td {
+  text-align: left;
+}
+
+.view-books th, .view-authors th {
+  background-color: #2c3e50;  /* Dark Blue */
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.view-books td, .view-authors td {
+  padding: 10px;
+}
+
+.view-books tr:nth-child(even), .view-authors tr:nth-child(even) {
+  background-color: #34495e;  /* Dark Blue */
+}
+
+.view-books tr:hover, .view-authors tr:hover {
+  background-color: #2980b9;  /* Light Blue */
+}
