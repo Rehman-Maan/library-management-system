@@ -8,7 +8,7 @@ function AddAuthor() {
     e.preventDefault();
     if (!name) return alert("Please enter an author name.");
 
-    axios.post(' https://1c4f-111-68-109-251.ngrok-free.app/authors', { name })
+    axios.post('https://dc-cep-1.onrender.com/authors', { name })
       .then(response => {
         alert("Author added successfully");
         setName('');
