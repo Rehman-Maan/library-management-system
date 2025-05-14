@@ -5,11 +5,21 @@ function AddBook() {
   const [books, setBooks] = useState([]);
   const [newBook, setNewBook] = useState({ title: '', genre: '', pages: '', author_id: '' });
 
+  // useEffect(() => {
+  //   axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
+  //     .then(response => setBooks(response.data))
+  //     .catch(error => console.error('Error fetching authors:', error));
+  // }, []);
+
   useEffect(() => {
-    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
-      .then(response => setBooks(response.data))
-      .catch(error => console.error('Error fetching authors:', error));
-  }, []);
+  axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
+    .then(response => setBooks(response.data))
+    .catch(error => {
+      console.error('Error fetching authors:', error);
+      setBooks([]); // Ensure books state is set to an empty array on error
+      setError('Failed to load authors.');
+    });
+}, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
