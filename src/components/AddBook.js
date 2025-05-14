@@ -6,7 +6,7 @@ function AddBook() {
   const [newBook, setNewBook] = useState({ title: '', genre: '', pages: '', author_id: '' });
 
   useEffect(() => {
-    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
+    axios.get('https://dc-cep-1.onrender.com/authors')
       .then(response => setBooks(response.data))
       .catch(error => console.error('Error fetching authors:', error));
   }, []);
@@ -30,7 +30,7 @@ function AddBook() {
     e.preventDefault();
     if (!newBook.title || !newBook.author_id) return alert("Title and Author are required.");
 
-    axios.post('https://1c4f-111-68-109-251.ngrok-free.app/books', newBook)
+    axios.post('https://dc-cep-1.onrender.com/books', newBook)
       .then(response => {
         alert("Book added successfully");
         setNewBook({ title: '', genre: '', pages: '', author_id: '' });
