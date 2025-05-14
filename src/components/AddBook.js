@@ -6,7 +6,7 @@ function AddBook() {
   const [newBook, setNewBook] = useState({ title: '', genre: '', pages: '', author_id: '' });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/authors')
+    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/authors')
       .then(response => setBooks(response.data))
       .catch(error => console.error('Error fetching authors:', error));
   }, []);
@@ -20,7 +20,7 @@ function AddBook() {
     e.preventDefault();
     if (!newBook.title || !newBook.author_id) return alert("Title and Author are required.");
 
-    axios.post('http://localhost:5000/books', newBook)
+    axios.post('https://1c4f-111-68-109-251.ngrok-free.app/books', newBook)
       .then(response => {
         alert("Book added successfully");
         setNewBook({ title: '', genre: '', pages: '', author_id: '' });
