@@ -6,7 +6,7 @@ function ViewBooks() {
 
   useEffect(() => {
     // Fetch books from the backend
-    axios.get('http://localhost:5000/books')
+    axios.get('https://1c4f-111-68-109-251.ngrok-free.app/books')
       .then(response => setBooks(response.data))
       .catch(error => console.error('Error fetching books:', error));
   }, []);
